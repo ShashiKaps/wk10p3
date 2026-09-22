@@ -15,15 +15,15 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           submodules: true
           lfs: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v5
         with:
-          node-version: '22'  # Adjust if your project uses a different Node.js version
+          node-version: '24'  # Adjust if your project uses a different Node.js version
 
       - name: Install dependencies
         run: npm install
